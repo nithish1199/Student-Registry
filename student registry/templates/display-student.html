@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Details</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Details</h1>
+    <table>
+        <Thead>
+            <tr>
+                <th scope="col">STUDENT ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">GENDER</th>
+                <th scope="col">DATE OF BIRTH</th>
+                <th scope="col">CITY</th>
+                <th scope="col">STATE</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">QUALIFICATION</th>
+                <th scope="col">STREAM</th>
+            </tr>
+        </Thead>
+        <TBody>
+            {% for row in rows%}
+            <tr>
+                <td>{{row['Id']}}</td>
+                <td>{{row['Name']}}</td>
+                <td>{{row['Gender']}}</td>
+                <td>{{row['DateOfBirth']}}</td>
+                <td>{{row['City']}}</td>
+                <td>{{row['State']}}</td>
+                <td>{{row['Email']}}</td>
+                <td>{{row['Qualification']}}</td>
+                <td>{{row['Stream']}}</td>
+            </tr>
+            {% endfor %}
+        </TBody>
+    </table>
+</body>
+
+</html>
